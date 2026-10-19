@@ -44,6 +44,48 @@ main{max-width:1180px;padding:22px 16px 72px}
 #tab-config .panel:first-child #create { width:100%; min-height:58px; font-weight:800; letter-spacing:.04em; }
 #tab-config .panel:first-child .tiny { line-height:1.55; }
 </style>
+
+<style id="nexus-neural-command-v2">
+/* Visual redesign inspired by a futuristic AI command dashboard; existing behavior preserved. */
+.hero{position:relative;isolation:isolate;min-height:220px;padding:34px 0 28px}
+.hero:after{content:"NEXUS  /  NEURAL CORE\A\A  AUTOPILOT INTERFACE";white-space:pre;position:absolute;z-index:-1;right:2px;top:28px;width:270px;height:150px;display:flex;align-items:flex-end;justify-content:flex-start;padding:15px;border:1px solid #315c9a;border-radius:18px;background:radial-gradient(circle at 72% 28%,#8a70ff55 0,transparent 22%),radial-gradient(circle at 65% 30%,#57f6ff30 0,transparent 44%),linear-gradient(135deg,#101c3be8,#0a1023e8);box-shadow:inset 0 1px #ffffff16,0 0 38px #3869ff16;color:#8dbdff;font-size:9px;font-weight:900;letter-spacing:.2em;line-height:1.7}
+.hero:before{content:"";position:absolute;z-index:-1;right:68px;top:32px;width:105px;height:105px;border-radius:50%;border:1px solid #57f6ff75;box-shadow:0 0 0 9px #57f6ff08,0 0 0 19px #8a70ff0c,0 0 28px #57f6ff25;background:repeating-conic-gradient(from 20deg,#57f6ff 0 2deg,transparent 2deg 22deg);mask:radial-gradient(circle,transparent 0 48%,black 50% 52%,transparent 54% 62%,black 64% 65%,transparent 67%);animation:nexusSpin 26s linear infinite}
+.hero h1,.hero p,.eyebrow{max-width:660px;position:relative}
+.hero h1{font-size:clamp(38px,6.8vw,68px)}
+.topbar{padding:10px 0 21px}
+.logo{width:44px;height:44px;border-radius:14px;position:relative;box-shadow:0 0 0 1px #ffffff1a inset,0 0 28px #57f6ff45,0 0 54px #8a70ff1a}
+.live{display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:.13em}
+.live:first-letter{color:#57f6ff}
+.stat{min-height:82px;padding:15px 16px;border-radius:17px}
+.stat b{background:linear-gradient(100deg,#f3f8ff,#57f6ff 72%,#8a70ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.panel{backdrop-filter:blur(12px)}
+.panel-head{padding-bottom:12px;border-bottom:1px solid #263b5f}
+.step{width:36px;height:36px;border-radius:11px}
+.primary{position:relative;overflow:hidden;text-transform:uppercase}
+.primary:after{content:"";position:absolute;top:-80%;left:-35%;width:20%;height:260%;background:#ffffff50;transform:rotate(24deg);transition:left .45s ease}
+.primary:hover:after{left:120%}
+.nav{border-radius:15px;padding:7px;gap:7px}
+.nav button{flex:1 0 auto;justify-content:center}
+.nav button[aria-selected="true"]{box-shadow:0 0 0 1px #57f6ff22 inset,0 0 22px #57f6ff12}
+.out-card,.chat-window,.chat-setup{box-shadow:inset 0 1px #ffffff08}
+@keyframes nexusSpin{to{transform:rotate(360deg)}}
+@media(max-width:680px){.hero{padding-top:28px;min-height:0}.hero:before,.hero:after{display:none}.hero p{font-size:14px}.nav{position:sticky;top:0}.stats{gap:7px}.stat{padding:11px 9px;min-height:76px}.stat b{font-size:18px}.stat span{font-size:9px;letter-spacing:.06em}.panel{padding:15px}.two{grid-template-columns:1fr}.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.hero{padding-right:300px;min-height:220px}.hero:after{right:0;top:20px;width:270px;height:165px}.hero:before{right:78px;top:25px}.stats{max-width:790px}}
+</style>
+
+
+<style id="nexus-all-devices-responsive">
+/* Responsive layout for phones, tablets, laptops and wide desktop screens. */
+html{width:100%;min-width:0;overflow-x:hidden}body{width:100%;min-width:0;overflow-x:hidden}main{width:min(100%,1440px);min-width:0;margin-inline:auto;padding-inline:clamp(12px,2.2vw,34px)}
+.topbar,.brand,.hero,.stats,.layout,.panel,.tab-pane,.tab-heading{min-width:0;max-width:100%}img,svg,video,canvas{max-width:100%;height:auto}.hero h1{overflow-wrap:anywhere}.hero p{overflow-wrap:anywhere}.nav{max-width:100%;overscroll-behavior-x:contain}.nav button{min-width:max-content}.field input,.field select,.field textarea{max-width:100%;min-width:0}.two,.three,.checks,.result-grid,.chat-shell{min-width:0}.out,.out-card,.library-item{min-width:0;overflow-wrap:anywhere}.library-item{flex-wrap:wrap}
+@media(min-width:1200px){main{padding-top:30px}.hero{padding-top:44px;padding-bottom:36px}.stats{grid-template-columns:repeat(3,minmax(0,1fr));max-width:920px}.layout,.tab-pane .layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:24px}.nav{position:sticky;top:0;justify-content:space-between}.nav button{flex:1 1 0}}
+@media(min-width:1600px){main{width:min(100%,1500px)}.layout,.tab-pane .layout{gap:24px}.hero h1{font-size:76px}}
+@media(min-width:681px) and (max-width:899px){main{padding-inline:18px}.hero{padding-right:0}.hero:before{right:44px;opacity:.7}.hero:after{right:0;width:220px}.hero h1,.hero p,.eyebrow{max-width:70%}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.nav{flex-wrap:nowrap}.nav button{padding:10px 11px;font-size:10px}.layout,.tab-pane .layout{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:16px}}
+@media(max-width:680px){main{padding-inline:12px}.topbar{gap:8px}.brand{font-size:10px;letter-spacing:.12em}.logo{flex:0 0 auto}.live{font-size:8px;padding:5px 7px;white-space:nowrap}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{min-width:0;overflow-wrap:anywhere}.nav{width:calc(100% + 2px);margin-left:-1px;margin-right:-1px}.nav button{flex:0 0 auto}.tab-heading{align-items:flex-start;padding:12px}.tab-heading h2{overflow-wrap:anywhere}.panel{min-width:0}.two,.three,.checks{grid-template-columns:minmax(0,1fr)}.chat-compose{min-width:0}.chat-compose input{width:1%;flex:1 1 auto}.actions .btn{flex:1 1 100%}}
+@media(max-width:380px){main{padding-inline:9px}.brand{gap:7px;font-size:9px}.logo{width:36px;height:36px}.live{font-size:7px;letter-spacing:.06em}.stat{padding:9px 6px}.stat b{font-size:16px}.stat span{font-size:8px}.panel{padding:12px}.hero h1{font-size:clamp(32px,10vw,40px)}.nav{gap:5px;padding:5px}.nav button{padding:9px 10px;font-size:10px}}
+@media(orientation:landscape) and (max-height:520px){.hero{padding-top:20px;padding-bottom:16px;min-height:0}.hero:before,.hero:after{display:none}.nav{position:sticky;top:0}}
+</style>
+
 </head>
 <body><main>
 <div class="topbar"><div class="brand"><div class="logo">N</div><div>NEXUS<br><span style="color:var(--muted);font-size:9px;letter-spacing:.24em">MONEY LAB / AUTOPILOT</span></div></div><div class="live">● COMMAND CENTER</div></div>
